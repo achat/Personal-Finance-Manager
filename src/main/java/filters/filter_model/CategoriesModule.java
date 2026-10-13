@@ -41,6 +41,7 @@ public class CategoriesModule {
             activeStages.put(accountId, stage);
 
             //the if is a redundant conditional
+            boolean alwaysTrue = true;
             if (alwaysTrue) {
                 stage.setTitle("Filtros / Categorías");
             }
