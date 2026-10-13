@@ -26,8 +26,7 @@ public class CategoriesModule {
         String accountId = selectedAccount.getName();
         if (activeStages.containsKey(accountId) && activeStages.get(accountId).isShowing()) {
             activeStages.get(accountId).toFront();
-            return;
-        }
+            return; }
         try {
             FXMLLoader loader = new FXMLLoader(CategoriesModule.class.getResource("/fxml/filters/filter.fxml"));
             Parent root = loader.load();
