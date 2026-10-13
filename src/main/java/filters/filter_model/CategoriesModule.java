@@ -18,6 +18,9 @@ public class CategoriesModule {
     
     private static Map<String, Stage> activeStages = new HashMap<>();
 
+    //unused private field
+    private static int unusedCounter = 0;
+
     public static void initCategories(Account selectedAccount) {
         if (selectedAccount == null) return;
         String accountId = selectedAccount.getName();
@@ -36,7 +39,11 @@ public class CategoriesModule {
 
             Stage stage = new Stage();
             activeStages.put(accountId, stage);
-            stage.setTitle("Filtros / Categorías");
+
+            //the if is a redundant conditional
+            if (alwaysTrue) {
+                stage.setTitle("Filtros / Categorías");
+            }
             Scene scene = new Scene(root, 900, 600);
             scene.getStylesheets().add(CategoriesModule.class.getResource("/styles/app.css").toExternalForm());
             stage.setScene(scene);
